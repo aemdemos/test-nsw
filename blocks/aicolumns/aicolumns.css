@@ -1,0 +1,73 @@
+
+.aicolumns-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.aicolumns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aicolumns > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row; /* Ensure elements are side by side */
+}
+
+.aicolumns > div > div:nth-child(1) {
+  flex: 0 0 auto;
+  width: 150px; /* Adjust width based on the image size */
+  margin-right: 20px; /* Spacing between image and text */
+}
+
+.aicolumns > div > div:nth-child(1) img {
+  display: block;
+  width: 100%;
+}
+
+.aicolumns > div > div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Ensure text elements are aligned vertically */
+  text-align: left; /* Align text to the left */
+}
+
+.aicolumns > div > div:nth-child(2) > p:first-child {
+  font-weight: bold;
+  font-size: 24px; /* Adjust font size as needed */
+  margin: 0 0 10px 0; /* Spacing below the title */
+}
+
+.aicolumns > div > div:nth-child(2) > p:nth-child(2) {
+  font-size: 16px; /* Adjust font size as needed */
+  margin: 0 0 10px 0; /* Spacing below the tagline */
+}
+
+.aicolumns > div > div:nth-child(2) > p:nth-child(3),
+.aicolumns > div > div:nth-child(2) > p:nth-child(4) {
+  font-size: 14px; /* Adjust font size as needed */
+  margin: 0;
+}
+
+.aicolumns > div > div:nth-child(2) > p:nth-child(3) {
+  font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  .aicolumns > div {
+    align-items: center;
+    flex-direction: row; /* Ensure flex direction is row for larger screens */
+    gap: 24px;
+  }
+
+  .aicolumns > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
